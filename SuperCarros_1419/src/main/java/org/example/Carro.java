@@ -9,11 +9,14 @@ public class Carro {
     private Boolean ligado;
     private Integer velocidadeAtual;
     private Integer velocidadeMaxima;
+    private Integer kMs;
+    private boolean radioLigado;
 
     public Carro() {
         this.ligado = false;
         this.velocidadeMaxima = 100;
         this.velocidadeAtual = 0;
+        this.radioLigado = false;
     }
 
     public String getCor() {
@@ -40,8 +43,12 @@ public class Carro {
         this.ligado = true;
     }
 
-    public void desligar() {
+    public void desligar() throws Exception {
+        if (this.velocidadeAtual != 0 ){
+            throw new Exception("Não deve desligar carro em movimento");
+        }
         this.ligado = false;
+
     }
 
     public Integer getVelocidadeAtual() {
@@ -63,4 +70,36 @@ public class Carro {
     public Integer getVelocidadeMaxima() {
         return velocidadeMaxima;
     }
+
+    public Integer getkMs() {
+        return kMs;
+    }
+
+    public boolean getRadio(){
+        return this.radioLigado;
+
+    }
+
+    public void ligarRadio() {
+        if (this.radioLigado){
+            System.out.println("O radio está ligado!");
+        } else {
+            this.radioLigado =  true;
+            System.out.println("Rádio ligado!");
+        }
+        
+    }
+       
+    public void desligarRadio() {
+        if (this.radioLigado) {
+            System.out.println("O rádio já está desligado!");
+            
+        }else {
+            this.radioLigado = false;
+            System.out.println("Radio desligado");
+        }
+    }
+    
+
+    
 }

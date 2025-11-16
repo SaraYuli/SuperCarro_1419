@@ -1,7 +1,30 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+     * Um carro tem os seguintes atributos:
+     * - cor
+     * - marca
+     * - ligado
+     * - velocidadeAtual
+     * - velocidadeMaxima
+     *
+     * Enquanto o carro estiver desligado deve ser capaz de:
+     * - Ligar
+     * - Motrar estado atual (toString())
+     *
+     * Enquanto o carro estiver ligado deve ser capaz de:
+     * - Desligar
+     * - Acelerar
+     * - Frear
+     * - Motrar estado atual (toString())
+     *
+     * Regras:
+     * - Só podemos desligar o carro quando ele parar (velocidadeAtual = 0)
+     * - Não existe velocidade negativa
+     * - Um carro tem por padrão velocidade máx = 100
+     * - O carro não pode passar de sua velocidade máxima
+     */
+
 public class Main {
 
 
